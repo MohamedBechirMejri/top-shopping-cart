@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 const Cart = (props) => {
   const ref = useRef(null);
-  const { items, total } = props.data;
+  const { items} = props.data;
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -15,7 +15,11 @@ const Cart = (props) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [props, ref]);
-
+const total = items
+  .reduce((acc, item) => {
+    return acc + parseFloat(item.price * item.quantity);
+  }, 0)
+  .toFixed(2);
   return (
     <>
       <div
