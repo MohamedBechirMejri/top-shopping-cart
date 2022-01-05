@@ -1,28 +1,32 @@
 const Shop = (props) => {
   return (
-    <div className="pt-[5em]">
-      <h1>Shop</h1>
-      <div className="flex items-center justify-center gap-8">
+    <div className="py-[5em]">
+      <h1 className="p-8 text-4xl font-extrabold text-center">Shop</h1>
+      <div className="flex flex-col flex-wrap items-center justify-center gap-8 sm:flex-row">
         {props.items.map((item) => (
           <div
-            className="flex flex-col border border-black  items-center justify-start  text-center "
+            className="flex items-center justify-start gap-2 text-center border-2 border-black shadow-lg sm:pb-2 sm:flex-col sm:items-center sm:justify-center sm:gap-4"
             key={item.id}
           >
-            <img src={item.image} alt={item.name} className="w-32 h-32" />
-            <div className="grow gap-2 flex flex-col">
-              <p className="text-center text-xl font-semibold">{item.name}</p>
-              <p className="text-center text-xl">${item.price}</p>
-              <div className="flex items-center justify-center gap-4">
-                <button className="bg-black text-white font-medium   justify-center items-center flex  px-2">
-                  -
-                </button>
-                <p className="text-center text-xl">{item.quantity}</p>
-                <button className="bg-black text-white font-medium   justify-center items-center flex px-2">
-                  +
-                </button>
+            <img src={item.image} alt={item.name} className="" />
+            <div className="flex flex-col w-full gap-2 grow">
+              <div className="flex flex-col w-full gap-2 grow">
+                <p className="text-xl font-semibold text-center">{item.name}</p>
+                <p className="text-xl text-center">${item.price}</p>
+                <div className="flex items-center justify-center gap-4">
+                  <button className="flex items-center justify-center px-2 font-medium text-white bg-black">
+                    -
+                  </button>
+                  <p className="text-xl text-center">{item.quantity}</p>
+                  <button className="flex items-center justify-center px-2 font-medium text-white bg-black">
+                    +
+                  </button>
+                </div>{" "}
               </div>{" "}
-            </div>{" "}
-            <button>Add to cart</button>
+              <button className="p-2 px-8 font-medium text-white uppercase bg-black">
+                Add to cart
+              </button>
+            </div>
           </div>
         ))}
       </div>
