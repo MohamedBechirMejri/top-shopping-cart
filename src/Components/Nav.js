@@ -2,7 +2,7 @@ import React from "react";
 
 const Nav = (props) => {
   return (
-    <nav className="flex items-center justify-between  bg-white   p-3 text-black border-black border-b fixed w-screen text-3xl font-extrabold">
+    <nav className="flex items-center justify-between  bg-white   p-3 text-black border-black border-b fixed w-screen text-3xl font-extrabold top-0">
       <div className="  flex items-center gap-4">
         <a href="#responsive-header" className="block  text-center  ">
           <div className="flex items-center justify-center leading-[.8em] text-[.8em] text-[#ec40fc]">
