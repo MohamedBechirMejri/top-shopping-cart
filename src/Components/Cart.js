@@ -6,21 +6,21 @@ const items = [
     name: "Product 1",
     quantity: 1,
     price: "599.9",
-    image: "https://picsum.photos/id/1/200/300",
+    image: "https://picsum.photos/200/300",
   },
   {
     id: 2,
     name: "Product 2",
     quantity: 1,
     price: "599.9",
-    image: "https://picsum.photos/id/2/200/300",
+    image: "https://picsum.photos/200/300",
   },
   {
     id: 3,
     name: "Product 3",
     quantity: 1,
     price: "599.9",
-    image: "https://picsum.photos/id/3/200/300",
+    image: "https://picsum.photos/200/300",
   },
 ];
 const total = items
@@ -50,7 +50,9 @@ const Cart = (props) => {
         ref={ref}
         className={`border-l-2 h-screen w-[30vw] fixed z-10 transition-all ease-in-out duration-[250ms]  border-black bg-white flex flex-col ${
           props.isOpen ? "right-0" : "-right-[30vw]"
-        } items-center justify-start gap-2 p-4`}
+        } items-center justify-start gap-2 p-4  ${
+          props.isOpen ? " ring-[#000000a2]" : "ring-[#00000000] "
+        } ring-[100vw] `}
       >
         <h1 className="uppercase font-extrabold text-2xl m-4">your Cart</h1>
         <div className="w-full flex flex-col items-start justify-start gap-4  ">
