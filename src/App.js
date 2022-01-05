@@ -73,7 +73,7 @@ const App = () => {
   const [cartItems, setCartItems] = useState([]);
   return (
     <div className="w-screen h-screen ">
-      <Nav setIsOpen={setIsOpen} />
+      <Nav setIsOpen={setIsOpen} cartItems={cartItems} />
       <Cart
         setIsOpen={setIsOpen}
         isOpen={isOpen}
