@@ -51,8 +51,8 @@ const Cart = (props) => {
                       }
                       if (item.quantity === 0) {
                         props.setCartItems([
-                          ...items.filter(() => {
-                            return !item;
+                          ...items.filter((i) => {
+                            return i !== item;
                           }),
                         ]);
                       }
