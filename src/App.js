@@ -1,6 +1,7 @@
 import Nav from "./Components/Nav";
 import Cart from "./Components/Cart";
 import { useState } from "react";
+import Shop from './Components/Shop';
 const items = [
   {
     id: 1,
@@ -42,6 +43,7 @@ const App = () => {
           total,
         }}
       />
+      <Shop items={items} />
     </div>
   );
 };
