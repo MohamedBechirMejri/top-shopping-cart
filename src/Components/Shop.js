@@ -23,7 +23,17 @@ const Shop = (props) => {
                   </button>
                 </div>{" "}
               </div>{" "}
-              <button className="p-2 px-8 font-medium text-white uppercase bg-black">
+              <button
+                className="p-2 px-8 font-medium text-white uppercase bg-black"
+                onClick={() => {
+                  if (props.cartItems.includes(item)) {
+                    item.quantity++;
+                    props.setCartItems([...props.cartItems]);
+                  } else {
+                    props.setCartItems([...props.cartItems, item]);
+                  }
+                }}
+              >
                 Add to cart
               </button>
             </div>
