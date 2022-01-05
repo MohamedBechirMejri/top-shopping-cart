@@ -2,10 +2,16 @@ import React from "react";
 
 const Nav = (props) => {
   return (
-    <nav className="flex items-center justify-between  bg-white   p-3 text-black border-black border-b fixed w-screen text-3xl font-extrabold top-0">
-      <div className="  flex items-center gap-4">
-        <a href="#responsive-header" className="block  text-center  ">
-          <div className="flex items-center justify-center leading-[.8em] text-[.8em] text-[#ec40fc]">
+    <nav className="fixed top-0 flex items-center justify-between w-screen p-3 text-3xl font-extrabold text-black bg-white border-b border-black">
+      <div className="flex items-center gap-4 ">
+        <a href="#responsive-header" className="block text-center ">
+          <div
+            className="flex items-center justify-center leading-[.8em] text-[.8em] text-[#ec40fc]"
+            style={{
+              color: "transparent",
+              "-webkit-text-stroke": "1px #ec40fc",
+            }}
+          >
             <div>
               <p>M</p>
               <p>B</p>
@@ -21,13 +27,13 @@ const Nav = (props) => {
           </div>
         </a>
 
-        <a href="#responsive-header" className="  ">
+        <a href="#responsive-header" className="">
           Home
         </a>
-        <a href="#responsive-header" className="  ">
+        <a href="#responsive-header" className="">
           Shop
         </a>
-        <a href="#responsive-header" className=" ">
+        <a href="#responsive-header" className="">
           About
         </a>
       </div>
