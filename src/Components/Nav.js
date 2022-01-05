@@ -9,7 +9,7 @@ const Nav = (props) => {
             className="flex items-center justify-center leading-[.8em] text-[.8em] text-[#ec40fc]"
             style={{
               color: "transparent",
-              "-webkit-text-stroke": "1px #ec40fc",
+              WebkitTextStroke: "1px #ec40fc",
             }}
           >
             <div>
