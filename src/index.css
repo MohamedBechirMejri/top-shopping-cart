@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -14,3 +15,9 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ 
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
