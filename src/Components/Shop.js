@@ -11,8 +11,15 @@ const Shop = (props) => {
             <img src={item.image} alt={item.name} className="" />
             <div className="flex flex-col w-full gap-2 grow">
               <div className="flex flex-col w-full gap-2 grow">
-                <p className="text-xl font-semibold text-center">{item.name}</p>
-                <p className="text-xl text-center">${item.price}</p>
+                <p className="text-xl font-extrabold text-center">
+                  {item.name}
+                </p>
+                <p className="text-xl text-center">
+                  $
+                  {item.quantity
+                    ? (item.price * item.quantity).toFixed(1)
+                    : item.price}
+                </p>
                 <div className="flex items-center justify-center gap-4">
                   <button
                     className="flex items-center justify-center px-2 font-medium text-white bg-black"
@@ -40,7 +47,7 @@ const Shop = (props) => {
               <button
                 className="p-2 px-8 font-medium text-white uppercase bg-black"
                 onClick={() => {
-                  item.quantity++;
+                  if (!item.quantity) item.quantity++;
                   if (props.cartItems.includes(item)) {
                     props.setCartItems([...props.cartItems]);
                   } else {

@@ -39,8 +39,15 @@ const Cart = (props) => {
             >
               <img src={item.image} alt={item.name} className="w-32 h-32" />
               <div className="flex flex-col gap-2 grow">
-                <p className="text-xl font-semibold text-center">{item.name}</p>
-                <p className="text-xl text-center">${item.price}</p>
+                <p className="text-xl font-extrabold text-center">
+                  {item.name}
+                </p>
+                <p className="text-xl text-center">
+                  $
+                  {item.quantity
+                    ? (item.price * item.quantity).toFixed(1)
+                    : item.price}
+                </p>
                 <div className="flex items-center justify-center gap-4">
                   <button
                     className="flex items-center justify-center px-2 font-medium text-white bg-black"
