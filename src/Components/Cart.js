@@ -23,7 +23,7 @@ const Cart = (props) => {
         className={`border-l-2 h-screen w-[30vw] fixed z-10 transition-all ease-in-out duration-[250ms]  border-black bg-white flex flex-col ${
           props.isOpen ? "right-0" : "-right-[30vw]"
         } items-center justify-start gap-2 p-4  ${
-          props.isOpen ? " ring-[#000000a2]" : "ring-[#00000000] "
+          props.isOpen ? " ring-[#00000070]" : "ring-[#00000000] "
         } ring-[100vw] `}
       >
         <h1 className="uppercase font-extrabold text-2xl m-4">your Cart</h1>
