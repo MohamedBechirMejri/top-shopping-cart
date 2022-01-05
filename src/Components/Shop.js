@@ -14,11 +14,25 @@ const Shop = (props) => {
                 <p className="text-xl font-semibold text-center">{item.name}</p>
                 <p className="text-xl text-center">${item.price}</p>
                 <div className="flex items-center justify-center gap-4">
-                  <button className="flex items-center justify-center px-2 font-medium text-white bg-black">
+                  <button
+                    className="flex items-center justify-center px-2 font-medium text-white bg-black"
+                    onClick={() => {
+                      if (item.quantity > 0) {
+                        item.quantity--;
+                        props.setCartItems([...props.cartItems]);
+                      }
+                    }}
+                  >
                     -
                   </button>
                   <p className="text-xl text-center">{item.quantity}</p>
-                  <button className="flex items-center justify-center px-2 font-medium text-white bg-black">
+                  <button
+                    className="flex items-center justify-center px-2 font-medium text-white bg-black"
+                    onClick={() => {
+                      item.quantity++;
+                      props.setCartItems([...props.cartItems]);
+                    }}
+                  >
                     +
                   </button>
                 </div>{" "}
@@ -26,8 +40,8 @@ const Shop = (props) => {
               <button
                 className="p-2 px-8 font-medium text-white uppercase bg-black"
                 onClick={() => {
+                  item.quantity++;
                   if (props.cartItems.includes(item)) {
-                    item.quantity++;
                     props.setCartItems([...props.cartItems]);
                   } else {
                     props.setCartItems([...props.cartItems, item]);

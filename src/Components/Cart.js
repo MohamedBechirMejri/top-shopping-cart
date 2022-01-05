@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 const Cart = (props) => {
   const ref = useRef(null);
-  const { items} = props.data;
+  const { items} = props;
 
   useEffect(() => {
     const handleClickOutside = (event) => {
