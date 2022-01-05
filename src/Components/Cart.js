@@ -49,6 +49,13 @@ const Cart = (props) => {
                         item.quantity--;
                         props.setCartItems([...items]);
                       }
+                      if (item.quantity === 0) {
+                        props.setCartItems([
+                          ...items.filter(() => {
+                            return !item;
+                          }),
+                        ]);
+                      }
                     }}
                   >
                     -
