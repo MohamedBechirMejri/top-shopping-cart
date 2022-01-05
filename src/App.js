@@ -1,7 +1,7 @@
 import Nav from "./Components/Nav";
 import Cart from "./Components/Cart";
 import { useState } from "react";
-import Shop from './Components/Shop';
+import Shop from "./Components/Shop";
 const items = [
   {
     id: 1,
@@ -25,55 +25,52 @@ const items = [
     image: "https://picsum.photos/200/200",
   },
   {
-    id: 1,
-    name: "Product 1",
+    id: 4,
+    name: "Product 4",
     quantity: 1,
     price: "599.9",
     image: "https://picsum.photos/200/200",
   },
   {
-    id: 2,
-    name: "Product 2",
+    id: 5,
+    name: "Product 5",
     quantity: 1,
     price: "599.9",
     image: "https://picsum.photos/200/200",
   },
   {
-    id: 3,
-    name: "Product 3",
+    id: 6,
+    name: "Product 6",
     quantity: 1,
     price: "599.9",
     image: "https://picsum.photos/200/200",
   },
   {
-    id: 1,
-    name: "Product 1",
+    id: 7,
+    name: "Product 7",
     quantity: 1,
     price: "599.9",
     image: "https://picsum.photos/200/200",
   },
   {
-    id: 2,
-    name: "Product 2",
+    id: 8,
+    name: "Product 8",
     quantity: 1,
     price: "599.9",
     image: "https://picsum.photos/200/200",
   },
   {
-    id: 3,
-    name: "Product 3",
+    id: 9,
+    name: "Product 9",
     quantity: 1,
     price: "599.9",
     image: "https://picsum.photos/200/200",
   },
 ];
-const total = items
-  .reduce((acc, item) => {
-    return acc + parseFloat(item.price * item.quantity);
-  }, 0)
-  .toFixed(2);
+
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
   return (
     <div className="w-screen h-screen ">
       <Nav setIsOpen={setIsOpen} />
@@ -81,11 +78,10 @@ const App = () => {
         setIsOpen={setIsOpen}
         isOpen={isOpen}
         data={{
-          items,
-          total,
+          items: cartItems,
         }}
       />
-      <Shop items={items} />
+      <Shop items={items} cartItems={cartItems} setCartItems={setCartItems} />
     </div>
   );
 };
