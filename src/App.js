@@ -2,6 +2,7 @@ import Nav from "./Components/Nav";
 import Cart from "./Components/Cart";
 import { useState } from "react";
 import Shop from "./Components/Shop";
+import { Route, Routes } from "react-router-dom";
 const items = [
   {
     id: 1,
@@ -74,13 +75,25 @@ const App = () => {
   return (
     <div className="w-screen h-screen ">
       <Nav setIsOpen={setIsOpen} cartItems={cartItems} />
+      <Routes>
+       {/* <Route path="/" element={<Shop items={items} />} /> */}
+        <Route
+          path="shop"
+          element={
+            <Shop
+              items={items}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
+          }
+        />
+      </Routes>
       <Cart
         setIsOpen={setIsOpen}
         isOpen={isOpen}
         items={cartItems}
         setCartItems={setCartItems}
       />
-      <Shop items={items} cartItems={cartItems} setCartItems={setCartItems} />
     </div>
   );
 };

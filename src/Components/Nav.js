@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = (props) => {
   return (
@@ -26,16 +27,9 @@ const Nav = (props) => {
             </div>
           </div>
         </a>
-
-        <a href="#responsive-header" className="">
-          Home
-        </a>
-        <a href="#responsive-header" className="">
-          Shop
-        </a>
-        <a href="#responsive-header" className="">
-          About
-        </a>
+        <Link to="/">Home</Link>
+        <Link to="shop">Shop</Link>
+        <Link to="contact">Contact</Link>
       </div>
 
       <div className="flex flex-row-reverse items-center justify-center">
