@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Nav = (props) => {
   return (
-    <nav className="fixed top-0 flex items-center justify-between w-screen p-3 text-3xl font-extrabold text-black bg-white border-b border-black">
+    <nav className="fixed top-0 flex items-center justify-between w-screen p-3 text-3xl font-extrabold text-black bg-white border-b border-black ">
       <div className="flex items-center gap-4 ">
         <div
           className="flex items-center justify-center leading-[.8em] text-[.8em] text-center"
@@ -26,13 +26,40 @@ const Nav = (props) => {
           </div>
         </div>
 
-        <Link to="/">Home</Link>
-        <Link to="shop">Shop</Link>
-        <Link to="contact">Contact</Link>
+        <Link
+          to="/"
+          className="transition-all hover:text-transparent active:scale-95"
+          style={{
+
+            WebkitTextStroke: "1px #000",
+          }}
+        >
+          Home
+        </Link>
+        <Link
+          to="shop"
+          className="transition-all hover:text-transparent active:scale-95"
+          style={{
+
+            WebkitTextStroke: "1px #000",
+          }}
+        >
+          Shop
+        </Link>
+        <Link
+          to="contact"
+          className="transition-all hover:text-transparent active:scale-95"
+          style={{
+
+            WebkitTextStroke: "1px #000",
+          }}
+        >
+          Contact
+        </Link>
       </div>
 
       <div
-        className="flex flex-row-reverse items-center justify-center"
+        className="flex flex-row-reverse items-center justify-center hover:scale-105 active:scale-95"
         onClick={() => {
           props.setIsOpen(true);
         }}
