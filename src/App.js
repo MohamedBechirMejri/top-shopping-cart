@@ -74,9 +74,15 @@ const App = () => {
   const [cartItems, setCartItems] = useState([]);
   return (
     <div className="w-screen h-screen ">
-      <Nav setIsOpen={setIsOpen} cartItems={cartItems} />
+      <Nav setIsOpen={setIsOpen} cartItems={cartItems} />{" "}
+      <Cart
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+        items={cartItems}
+        setCartItems={setCartItems}
+      />
       <Routes>
-       {/* <Route path="/" element={<Shop items={items} />} /> */}
+        {/* <Route path="/" element={<Shop items={items} />} /> */}
         <Route
           path="shop"
           element={
@@ -88,12 +94,6 @@ const App = () => {
           }
         />
       </Routes>
-      <Cart
-        setIsOpen={setIsOpen}
-        isOpen={isOpen}
-        items={cartItems}
-        setCartItems={setCartItems}
-      />
     </div>
   );
 };

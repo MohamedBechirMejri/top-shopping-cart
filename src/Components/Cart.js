@@ -50,7 +50,7 @@ const Cart = (props) => {
                 </p>
                 <div className="flex items-center justify-center gap-4">
                   <button
-                    className="flex items-center justify-center px-2 font-medium text-white bg-black"
+                    className="flex items-center justify-center px-2 font-medium text-white bg-black hover:bg-[#353535] active:scale-95"
                     onClick={() => {
                       if (item.quantity > 0) {
                         item.quantity--;
@@ -69,7 +69,7 @@ const Cart = (props) => {
                   </button>
                   <p className="text-xl text-center">{item.quantity}</p>
                   <button
-                    className="flex items-center justify-center px-2 font-medium text-white bg-black"
+                    className="flex items-center justify-center px-2 font-medium text-white bg-black hover:bg-[#353535] active:scale-95"
                     onClick={() => {
                       item.quantity++;
                       props.setCartItems([...items]);
@@ -84,7 +84,7 @@ const Cart = (props) => {
         </div>
         <hr />
         <p className="text-xl font-bold">Total: ${total}</p>
-        <button className="p-2 px-12 text-xl font-medium text-white uppercase bg-black">
+        <button className="p-2 px-12 text-xl font-medium text-white uppercase bg-black hover:bg-[#353535] active:scale-95">
           Checkout
         </button>
       </div>

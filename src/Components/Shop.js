@@ -22,7 +22,7 @@ const Shop = (props) => {
                 </p>
                 <div className="flex items-center justify-center gap-4">
                   <button
-                    className="flex items-center justify-center px-2 font-medium text-white bg-black"
+                    className="flex items-center justify-center px-2 font-medium text-white bg-black hover:bg-[#353535] active:scale-95"
                     onClick={() => {
                       if (item.quantity > 0) {
                         item.quantity--;
@@ -34,7 +34,7 @@ const Shop = (props) => {
                   </button>
                   <p className="text-xl text-center">{item.quantity}</p>
                   <button
-                    className="flex items-center justify-center px-2 font-medium text-white bg-black"
+                    className="flex items-center justify-center px-2 font-medium text-white bg-black hover:bg-[#353535] active:scale-95"
                     onClick={() => {
                       item.quantity++;
                       props.setCartItems([...props.cartItems]);
@@ -45,7 +45,7 @@ const Shop = (props) => {
                 </div>{" "}
               </div>{" "}
               <button
-                className="p-2 px-8 font-medium text-white uppercase bg-black"
+                className="p-2 px-8 font-medium text-white uppercase bg-black hover:bg-[#353535] active:bg-[#505050]"
                 onClick={() => {
                   if (!item.quantity) item.quantity++;
                   if (props.cartItems.includes(item)) {
