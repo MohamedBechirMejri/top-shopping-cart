@@ -28,9 +28,8 @@ const Nav = (props) => {
 
         <Link
           to="/"
-          className="transition-all hover:text-transparent active:scale-95"
+          className="transition-all hover:text-transparent active:scale-95 text-[.75em]"
           style={{
-
             WebkitTextStroke: "1px #000",
           }}
         >
@@ -38,9 +37,8 @@ const Nav = (props) => {
         </Link>
         <Link
           to="shop"
-          className="transition-all hover:text-transparent active:scale-95"
+          className="transition-all hover:text-transparent active:scale-95 text-[.75em]"
           style={{
-
             WebkitTextStroke: "1px #000",
           }}
         >
@@ -48,9 +46,8 @@ const Nav = (props) => {
         </Link>
         <Link
           to="contact"
-          className="transition-all hover:text-transparent active:scale-95"
+          className="transition-all hover:text-transparent active:scale-95 text-[.75em]"
           style={{
-
             WebkitTextStroke: "1px #000",
           }}
         >
