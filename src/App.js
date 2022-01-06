@@ -4,15 +4,17 @@ import { useState } from "react";
 import Shop from "./Components/Shop";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./Components/Contact";
-import { items } from './serverData';
-
-
+import { items } from "./serverData";
+import Home from "./Components/Home";
+import coolBackground from "./assets/images/cool-background.png";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   return (
-    <div className="w-screen h-screen select-none">
+    <div className="w-screen h-screen select-none " style={{
+      backgroundImage: `url(${coolBackground})`,
+    }}>
       <Nav setIsOpen={setIsOpen} cartItems={cartItems} />{" "}
       <Cart
         setIsOpen={setIsOpen}
@@ -21,7 +23,7 @@ const App = () => {
         setCartItems={setCartItems}
       />
       <Routes>
-        <Route path="contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
         <Route
           path="shop"
           element={
@@ -31,7 +33,8 @@ const App = () => {
               setCartItems={setCartItems}
             />
           }
-        />
+        />{" "}
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </div>
   );

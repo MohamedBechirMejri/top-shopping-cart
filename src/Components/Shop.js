@@ -5,7 +5,7 @@ const Shop = (props) => {
       <div className="flex flex-col flex-wrap items-center justify-center gap-8 sm:flex-row">
         {props.items.map((item) => (
           <div
-            className="flex items-center justify-start gap-2 text-center transition-all border-2 border-black shadow-lg sm:flex-col sm:items-center sm:justify-center sm:gap-4 sm:hover:scale-105"
+            className="flex items-center justify-start gap-2 text-center transition-all bg-white border-2 border-black shadow-lg sm:flex-col sm:items-center sm:justify-center sm:gap-4 sm:hover:scale-105"
             key={item.id}
           >
             <img src={item.image} alt={item.name} className="" />
