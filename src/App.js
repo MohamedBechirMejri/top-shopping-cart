@@ -12,9 +12,14 @@ const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   return (
-    <div className="w-screen h-screen select-none " style={{
-      backgroundImage: `url(${coolBackground})`,
-    }}>
+    <div
+      className="w-screen h-screen select-none "
+      style={{
+        backgroundImage: `url(${coolBackground})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "round",
+      }}
+    >
       <Nav setIsOpen={setIsOpen} cartItems={cartItems} />{" "}
       <Cart
         setIsOpen={setIsOpen}

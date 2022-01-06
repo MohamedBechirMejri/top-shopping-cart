@@ -1,6 +1,6 @@
 const Shop = (props) => {
   return (
-    <div className="py-[5em]">
+    <div className="py-[5em] sm:pb-0">
       <h1 className="p-8 text-4xl font-extrabold text-center">Shop</h1>
       <div className="flex flex-col flex-wrap items-center justify-center gap-8 sm:flex-row">
         {props.items.map((item) => (
