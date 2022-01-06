@@ -3,77 +3,16 @@ import Cart from "./Components/Cart";
 import { useState } from "react";
 import Shop from "./Components/Shop";
 import { Route, Routes } from "react-router-dom";
-const items = [
-  {
-    id: 1,
-    name: "Product 1",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 2,
-    name: "Product 2",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 3,
-    name: "Product 3",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 4,
-    name: "Product 4",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 5,
-    name: "Product 5",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 6,
-    name: "Product 6",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 7,
-    name: "Product 7",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 8,
-    name: "Product 8",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-  {
-    id: 9,
-    name: "Product 9",
-    quantity: 0,
-    price: "599.9",
-    image: "https://picsum.photos/200/200",
-  },
-];
+import Contact from "./Components/Contact";
+import { items } from './serverData';
+
+
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   return (
-    <div className="w-screen h-screen ">
+    <div className="w-screen h-screen select-none">
       <Nav setIsOpen={setIsOpen} cartItems={cartItems} />{" "}
       <Cart
         setIsOpen={setIsOpen}
@@ -82,7 +21,7 @@ const App = () => {
         setCartItems={setCartItems}
       />
       <Routes>
-        {/* <Route path="/" element={<Shop items={items} />} /> */}
+        <Route path="contact" element={<Contact />} />
         <Route
           path="shop"
           element={
