@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="py-[5em] h-screen flex items-center justify-center m-auto">
+    <div className="py-[5em] h-screen flex items-center justify-center m-auto animate-fade-in">
       <a
         href="https://github.com/MohamedBechirMejri"
         target="_blank"

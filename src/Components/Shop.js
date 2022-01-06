@@ -1,11 +1,11 @@
 const Shop = (props) => {
   return (
-    <div className="py-[5em] sm:pb-0">
+    <div className="py-[5em] sm:pb-0 animate-fade-in">
       <h1 className="p-8 text-4xl font-extrabold text-center">Shop</h1>
       <div className="flex flex-col flex-wrap items-center justify-center gap-8 sm:flex-row">
         {props.items.map((item) => (
           <div
-            className="flex items-center justify-start gap-2 text-center transition-all bg-white border-2 border-black shadow-lg sm:flex-col sm:items-center sm:justify-center sm:gap-4 sm:hover:scale-105"
+            className="flex items-center justify-start gap-2 text-center transition-all bg-white border-2 border-black shadow-lg sm:flex-col sm:items-center sm:justify-center sm:gap-4 sm:hover:scale-105 animate-fade-in"
             key={item.id}
           >
             <img src={item.image} alt={item.name} className="" />
